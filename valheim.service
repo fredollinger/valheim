@@ -1,0 +1,12 @@
+[Unit]
+Description=Start Valheim on Boot
+After=network.target
+
+[Service]
+ExecStart=/home/follinge/valheim/run-valheim-docker-container.sh
+ExecStop=/home/follinge/valheim/stop-valheim-docker-container.sh
+Type=forking
+User=follinge
+
+[Install]
+WantedBy=default.target
