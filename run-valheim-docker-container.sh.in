@@ -8,6 +8,7 @@ SERVER_PASS=""
 
 docker run -d \
     --name valheim-server \
+    --restart=unless-stopped \
     --cap-add=sys_nice \
     --stop-timeout 120 \
     -p 2456-2457:2456-2457/udp \
